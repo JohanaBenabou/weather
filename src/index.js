@@ -1,13 +1,20 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./App";
+import "./styles.css";
+import Weather from "./Weather";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App />
+    <div className="App">
+      <div>
+        <h1>Weather Search Engine</h1>
+
+        <Weather temperature={12} />
+      </div>
+    </div>
   </StrictMode>
 );
